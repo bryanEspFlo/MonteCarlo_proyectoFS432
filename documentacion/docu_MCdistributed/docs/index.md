@@ -1,17 +1,8 @@
-# Welcome to MkDocs
+Este proyecto calcula el volumen de una hiperesfera de 4 dimensiones usando:
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+- C++
+- MPI
+- Programación orientada a objetos
+- Método de Monte Carlo
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Usa múltiples procesos MPI para acelerar el cálculo dividiendo el trabajo.
