@@ -1,0 +1,7 @@
+site_name: My Docs
+nav:
+  - Inicio: index.md
+  - API: api.md
+  - Ejemplos: ejemplos.md
+theme:
+  name: material
