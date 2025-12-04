@@ -45,7 +45,9 @@ int main(int argc, char* argv[]) {
 Para compilar se deben tener los archivos:
 
 MonteCarloMPI.hpp — declaración de la clase
+
 MonteCarloMPI.cpp — implementación de la clase
+
 main.cpp — archivo principal que usa la clase
 
 Luego, se compilan utilizando mpic++:
@@ -59,5 +61,6 @@ ara ejecutar el programa con N procesos se utiliza:
 mpirun -np N ./MonteCarlo
 
 Por ejemplo, con 8 procesos:
+
 
 mpirun -np 8 ./MonteCarlo
