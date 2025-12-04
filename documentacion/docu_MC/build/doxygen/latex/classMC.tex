@@ -22,6 +22,8 @@ double {\bfseries get\+Int\+Val} () const
 \Hypertarget{classMC_a40cd5dec7b3d3a25009dc9a4dcbf512f}\label{classMC_a40cd5dec7b3d3a25009dc9a4dcbf512f} 
 double {\bfseries get\+NVal} () const
 \begin{DoxyCompactList}\small\item\em Devuelve la cantidad de iteraciones realizadas. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classMC_a4cc721957913b560ad02521545933629}{get\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el tiempo que se toma en calcular la integral con Monte Carlo. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classMC_a63b5bb4c98ef92917ecd56929f1561b3}{get\+Err\+Val}} () const
 \begin{DoxyCompactList}\small\item\em Devuelve el error cometido al calcular la integral. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
@@ -78,7 +80,17 @@ double MC\+::get\+Err\+Val (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) 
 
 Devuelve el error cometido al calcular la integral. 
 
-Devuelve el error cometido del calculo de la integral. 
+Devuelve el error cometido del calculo de la integral. \Hypertarget{classMC_a4cc721957913b560ad02521545933629}\index{MC@{MC}!getTime@{getTime}}
+\index{getTime@{getTime}!MC@{MC}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily \label{classMC_a4cc721957913b560ad02521545933629} 
+double MC\+::get\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el tiempo que se toma en calcular la integral con Monte Carlo. 
+
+@ brief Devuelve que toma el cálculo de la integral con Monte Carlo. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

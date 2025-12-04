@@ -21,4 +21,4 @@ nav:
       - Calculo de integral con MC en memoria distribuida: ejemDis.md
   - Referencias: 
       - MC en memoria compartida: cpp/classMC.md
-      - MC en memoria distribuida: disCode.md
+      - MC en memoria distribuida: cpp/classMonteCarloMPI.md

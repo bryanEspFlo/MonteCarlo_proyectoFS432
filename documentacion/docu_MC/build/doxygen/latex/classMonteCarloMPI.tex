@@ -1,0 +1,90 @@
+\doxysection{Monte\+Carlo\+MPI Class Reference}
+\hypertarget{classMonteCarloMPI}{}\label{classMonteCarloMPI}\index{MonteCarloMPI@{MonteCarloMPI}}
+
+
+Clase que implementa el método de Monte Carlo distribuido mediante MPI.  
+
+
+
+
+{\ttfamily \#include $<$Distribuida.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMonteCarloMPI_a2acd02091afd91fd87536fea6fd17cb9}{Monte\+Carlo\+MPI}} (long long N\+\_\+total)
+\begin{DoxyCompactList}\small\item\em Constructor que inicializa la simulación y asigna trabajo local. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classMonteCarloMPI_abac1d2a139e51aa924e9923048d1ef6e}{ejecutar}} ()
+\begin{DoxyCompactList}\small\item\em Ejecuta la simulación Monte Carlo distribuida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que implementa el método de Monte Carlo distribuido mediante MPI. 
+
+Cada proceso MPI genera una cantidad asignada de puntos aleatorios y evalúa si estos pertenecen a la hiperesfera de radio 1 en 4 dimensiones. Los resultados se combinan mediante una reducción para obtener la estimación final. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMonteCarloMPI_a2acd02091afd91fd87536fea6fd17cb9}\index{MonteCarloMPI@{MonteCarloMPI}!MonteCarloMPI@{MonteCarloMPI}}
+\index{MonteCarloMPI@{MonteCarloMPI}!MonteCarloMPI@{MonteCarloMPI}}
+\doxysubsubsection{\texorpdfstring{MonteCarloMPI()}{MonteCarloMPI()}}
+{\footnotesize\ttfamily \label{classMonteCarloMPI_a2acd02091afd91fd87536fea6fd17cb9} 
+Monte\+Carlo\+MPI\+::\+Monte\+Carlo\+MPI (\begin{DoxyParamCaption}\item[{long long}]{N\+\_\+total}{}\end{DoxyParamCaption})}
+
+
+
+Constructor que inicializa la simulación y asigna trabajo local. 
+
+Constructor que inicializa la cantidad global y local de muestras.
+
+Divide de manera equilibrada el total de muestras entre los procesos, asignando una muestra adicional a los primeros procesos si N\+\_\+global no es divisible de forma exacta por el número de procesos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+\_\+total} & Número global de muestras.\\
+\hline
+\end{DoxyParams}
+Calcula cuántos puntos corresponden al proceso mediante una división equitativa. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMonteCarloMPI_abac1d2a139e51aa924e9923048d1ef6e}\index{MonteCarloMPI@{MonteCarloMPI}!ejecutar@{ejecutar}}
+\index{ejecutar@{ejecutar}!MonteCarloMPI@{MonteCarloMPI}}
+\doxysubsubsection{\texorpdfstring{ejecutar()}{ejecutar()}}
+{\footnotesize\ttfamily \label{classMonteCarloMPI_abac1d2a139e51aa924e9923048d1ef6e} 
+double Monte\+Carlo\+MPI\+::ejecutar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ejecuta la simulación Monte Carlo distribuida. 
+
+Ejecuta el método de Monte Carlo distribuido mediante MPI.
+
+Este método\+:
+\begin{DoxyItemize}
+\item Genera puntos aleatorios dentro del intervalo \mbox{[}-\/1,1\mbox{]}.
+\item Evalúa el integrando para cada punto.
+\item Usa MPI\+\_\+\+Reduce para sumar los resultados.
+\item Calcula el volumen aproximado (solo en el proceso 0).
+\item Difunde el valor final a todos los procesos con MPI\+\_\+\+Bcast.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Valor estimado del volumen de la hiperesfera.
+\end{DoxyReturn}
+Implementa\+:
+\begin{DoxyItemize}
+\item Generador aleatorio simple por proceso.
+\item Conteo de puntos dentro de la hiperesfera.
+\item Reducción de la suma total mediante MPI\+\_\+\+Reduce.
+\item Cálculo del volumen (proceso 0).
+\item Envío del resultado a todos los procesos con MPI\+\_\+\+Bcast.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Valor de la integral estimada (volumen aproximado). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Distribuida.\+hpp\item 
+src/Distribuida.\+cpp\end{DoxyCompactItemize}

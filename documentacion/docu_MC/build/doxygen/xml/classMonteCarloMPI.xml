@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classMonteCarloMPI" kind="class" language="C++" prot="public">
+    <compoundname>MonteCarloMPI</compoundname>
+    <includes refid="Distribuida_8hpp" local="no">Distribuida.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMonteCarloMPI_1a58c74c41f7f2162b6eb7a92bd50a2fc1" prot="private" static="no" mutable="no">
+        <type>long long</type>
+        <definition>long long MonteCarloMPI::N_global</definition>
+        <argsstring></argsstring>
+        <name>N_global</name>
+        <qualifiedname>MonteCarloMPI::N_global</qualifiedname>
+        <briefdescription>
+<para>Número total de puntos a generar entre todos los procesos. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Distribuida.hpp" line="27" column="15" bodyfile="include/Distribuida.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMonteCarloMPI_1a4ebbf89cf29ea324597e8472be82b96a" prot="private" static="no" mutable="no">
+        <type>long long</type>
+        <definition>long long MonteCarloMPI::N_local</definition>
+        <argsstring></argsstring>
+        <name>N_local</name>
+        <qualifiedname>MonteCarloMPI::N_local</qualifiedname>
+        <briefdescription>
+<para>Número de puntos asignados a este proceso. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Distribuida.hpp" line="28" column="15" bodyfile="include/Distribuida.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMonteCarloMPI_1af6309240688eac1413da92c9377ed0ac" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MonteCarloMPI::rank</definition>
+        <argsstring></argsstring>
+        <name>rank</name>
+        <qualifiedname>MonteCarloMPI::rank</qualifiedname>
+        <briefdescription>
+<para>Identificador del proceso MPI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Distribuida.hpp" line="29" column="9" bodyfile="include/Distribuida.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMonteCarloMPI_1a64527392fd019e4a80d05850a0ef0cfe" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MonteCarloMPI::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>MonteCarloMPI::size</qualifiedname>
+        <briefdescription>
+<para>Cantidad total de procesos MPI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Distribuida.hpp" line="30" column="9" bodyfile="include/Distribuida.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMonteCarloMPI_1a7c8928aa16484691100536efcda9d62b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MonteCarloMPI::funcIntegrando</definition>
+        <argsstring>(double x1, double x2, double x3, double x4)</argsstring>
+        <name>funcIntegrando</name>
+        <qualifiedname>MonteCarloMPI::funcIntegrando</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x3</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x4</declname>
+        </param>
+        <briefdescription>
+<para>Función integrando que determina si un punto pertenece a la hiperesfera 4D. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Determina si un punto pertenece a la hiperesfera 4D de radio 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada x1 del punto. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada x2 del punto. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada x3 del punto. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada x4 del punto. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 si el punto está dentro de la hiperesfera, 0 en caso contrario.</para>
+</simplesect>
+Se evalúa la condición: sqrt(x1^2 + x2^2 + x3^2 + x4^2) &lt;= 1</para>
+<para><simplesect kind="return"><para>1 Si el punto pertenece a la hiperesfera, 0 en caso contrario. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Distribuida.hpp" line="41" column="9" bodyfile="src/Distribuida.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMonteCarloMPI_1a2acd02091afd91fd87536fea6fd17cb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MonteCarloMPI::MonteCarloMPI</definition>
+        <argsstring>(long long N_total)</argsstring>
+        <name>MonteCarloMPI</name>
+        <qualifiedname>MonteCarloMPI::MonteCarloMPI</qualifiedname>
+        <param>
+          <type>long long</type>
+          <declname>N_total</declname>
+        </param>
+        <briefdescription>
+<para>Constructor que inicializa la simulación y asigna trabajo local. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor que inicializa la cantidad global y local de muestras.</para>
+<para>Divide de manera equilibrada el total de muestras entre los procesos, asignando una muestra adicional a los primeros procesos si N_global no es divisible de forma exacta por el número de procesos.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>N_total</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número global de muestras.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Calcula cuántos puntos corresponden al proceso mediante una división equitativa. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Distribuida.hpp" line="54" column="5" bodyfile="src/Distribuida.cpp" bodystart="23" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classMonteCarloMPI_1abac1d2a139e51aa924e9923048d1ef6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MonteCarloMPI::ejecutar</definition>
+        <argsstring>()</argsstring>
+        <name>ejecutar</name>
+        <qualifiedname>MonteCarloMPI::ejecutar</qualifiedname>
+        <briefdescription>
+<para>Ejecuta la simulación Monte Carlo distribuida. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Ejecuta el método de Monte Carlo distribuido mediante MPI.</para>
+<para>Este método:<itemizedlist>
+<listitem><para>Genera puntos aleatorios dentro del intervalo [-1,1].</para>
+</listitem><listitem><para>Evalúa el integrando para cada punto.</para>
+</listitem><listitem><para>Usa MPI_Reduce para sumar los resultados.</para>
+</listitem><listitem><para>Calcula el volumen aproximado (solo en el proceso 0).</para>
+</listitem><listitem><para>Difunde el valor final a todos los procesos con MPI_Bcast.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>Valor estimado del volumen de la hiperesfera.</para>
+</simplesect>
+Implementa:<itemizedlist>
+<listitem><para>Generador aleatorio simple por proceso.</para>
+</listitem><listitem><para>Conteo de puntos dentro de la hiperesfera.</para>
+</listitem><listitem><para>Reducción de la suma total mediante MPI_Reduce.</para>
+</listitem><listitem><para>Cálculo del volumen (proceso 0).</para>
+</listitem><listitem><para>Envío del resultado a todos los procesos con MPI_Bcast.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>Valor de la integral estimada (volumen aproximado). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Distribuida.hpp" line="68" column="12" bodyfile="src/Distribuida.cpp" bodystart="48" bodyend="101"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Clase que implementa el método de Monte Carlo distribuido mediante MPI. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Cada proceso MPI genera una cantidad asignada de puntos aleatorios y evalúa si estos pertenecen a la hiperesfera de radio 1 en 4 dimensiones. Los resultados se combinan mediante una reducción para obtener la estimación final. </para>
+    </detaileddescription>
+    <location file="include/Distribuida.hpp" line="25" column="1" bodyfile="include/Distribuida.hpp" bodystart="25" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classMonteCarloMPI_1abac1d2a139e51aa924e9923048d1ef6e" prot="public" virt="non-virtual"><scope>MonteCarloMPI</scope><name>ejecutar</name></member>
+      <member refid="classMonteCarloMPI_1a7c8928aa16484691100536efcda9d62b" prot="private" virt="non-virtual"><scope>MonteCarloMPI</scope><name>funcIntegrando</name></member>
+      <member refid="classMonteCarloMPI_1a2acd02091afd91fd87536fea6fd17cb9" prot="public" virt="non-virtual"><scope>MonteCarloMPI</scope><name>MonteCarloMPI</name></member>
+      <member refid="classMonteCarloMPI_1a58c74c41f7f2162b6eb7a92bd50a2fc1" prot="private" virt="non-virtual"><scope>MonteCarloMPI</scope><name>N_global</name></member>
+      <member refid="classMonteCarloMPI_1a4ebbf89cf29ea324597e8472be82b96a" prot="private" virt="non-virtual"><scope>MonteCarloMPI</scope><name>N_local</name></member>
+      <member refid="classMonteCarloMPI_1af6309240688eac1413da92c9377ed0ac" prot="private" virt="non-virtual"><scope>MonteCarloMPI</scope><name>rank</name></member>
+      <member refid="classMonteCarloMPI_1a64527392fd019e4a80d05850a0ef0cfe" prot="private" virt="non-virtual"><scope>MonteCarloMPI</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
