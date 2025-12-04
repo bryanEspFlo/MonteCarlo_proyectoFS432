@@ -3,6 +3,7 @@
   <compound refid="classMC" kind="class"><name>MC</name>
     <member refid="classMC_1a0a077c72b15e8726cf94e5d114c1e195" kind="variable"><name>valorIntegral</name></member>
     <member refid="classMC_1ac5fd524534a2e36815ea5d7a6831b1ea" kind="variable"><name>valorError</name></member>
+    <member refid="classMC_1af5e19b7b49ec4f3669c0d95a9bface15" kind="variable"><name>time_Procs</name></member>
     <member refid="classMC_1a384ec88888b1decad3f3ab6abc366044" kind="variable"><name>N</name></member>
     <member refid="classMC_1a42d26bd270270ea5788dcc421543d991" kind="function"><name>MC</name></member>
     <member refid="classMC_1af15d14de0488da7a8a63f9d815f50405" kind="function"><name>Esphere4D</name></member>
@@ -11,11 +12,23 @@
     <member refid="classMC_1aadaf92658e9aa8a519598e7ace145691" kind="function"><name>calcInt</name></member>
     <member refid="classMC_1ae0c52454ead52aa76ef267d7095e057e" kind="function"><name>getIntVal</name></member>
     <member refid="classMC_1a40cd5dec7b3d3a25009dc9a4dcbf512f" kind="function"><name>getNVal</name></member>
+    <member refid="classMC_1a4cc721957913b560ad02521545933629" kind="function"><name>getTime</name></member>
     <member refid="classMC_1a63b5bb4c98ef92917ecd56929f1561b3" kind="function"><name>getErrVal</name></member>
+  </compound>
+  <compound refid="classMonteCarloMPI" kind="class"><name>MonteCarloMPI</name>
+    <member refid="classMonteCarloMPI_1a58c74c41f7f2162b6eb7a92bd50a2fc1" kind="variable"><name>N_global</name></member>
+    <member refid="classMonteCarloMPI_1a4ebbf89cf29ea324597e8472be82b96a" kind="variable"><name>N_local</name></member>
+    <member refid="classMonteCarloMPI_1af6309240688eac1413da92c9377ed0ac" kind="variable"><name>rank</name></member>
+    <member refid="classMonteCarloMPI_1a64527392fd019e4a80d05850a0ef0cfe" kind="variable"><name>size</name></member>
+    <member refid="classMonteCarloMPI_1a7c8928aa16484691100536efcda9d62b" kind="function"><name>funcIntegrando</name></member>
+    <member refid="classMonteCarloMPI_1a2acd02091afd91fd87536fea6fd17cb9" kind="function"><name>MonteCarloMPI</name></member>
+    <member refid="classMonteCarloMPI_1abac1d2a139e51aa924e9923048d1ef6e" kind="function"><name>ejecutar</name></member>
+  </compound>
+  <compound refid="Distribuida_8hpp" kind="file"><name>Distribuida.hpp</name>
   </compound>
   <compound refid="MCsharem_8hpp" kind="file"><name>MCsharem.hpp</name>
   </compound>
-  <compound refid="mcdis_8cpp" kind="file"><name>mcdis.cpp</name>
+  <compound refid="Distribuida_8cpp" kind="file"><name>Distribuida.cpp</name>
   </compound>
   <compound refid="MCsharem_8cpp" kind="file"><name>MCsharem.cpp</name>
   </compound>

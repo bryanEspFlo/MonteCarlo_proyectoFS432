@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
     <compoundname>include</compoundname>
+    <innerfile refid="Distribuida_8hpp">Distribuida.hpp</innerfile>
     <innerfile refid="MCsharem_8hpp">MCsharem.hpp</innerfile>
     <briefdescription>
     </briefdescription>
