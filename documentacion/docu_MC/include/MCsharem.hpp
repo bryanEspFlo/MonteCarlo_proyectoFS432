@@ -28,6 +28,7 @@ class MC{
 
     double valorIntegral; ///< Valor del volumen de la hiperesfera calculado con Monte Carlo.
     double valorError; ///< Valor del error cometido en base al valor teórico real del volumen.
+    double time_Procs; ///< Tiempo en realizar el cálculo de la integral con Monte Carlo.
    
     /**
      * @brief Método para saber el tiempo que toma una iteración.
@@ -58,6 +59,11 @@ class MC{
      * @brief Devuelve la cantidad de iteraciones realizadas.
      */
     double getNVal() const;
+
+    /**
+     * @brief Devuelve el tiempo que se toma en calcular la integral con Monte Carlo.
+     */
+    double getTime() const;
 
     /**
      * @brief Devuelve el error cometido al calcular la integral.

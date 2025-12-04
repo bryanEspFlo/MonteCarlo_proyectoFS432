@@ -2,6 +2,7 @@ site_name: Proyecto FC
 
 theme:
   name: material
+  language: es
 
 plugins:
   - search
@@ -15,9 +16,9 @@ plugins:
 
 nav:
   - Inicio: index.md
-  - Ejemplos:
+  - Tutoriales:
       - Calculo de integral con MC en memoria compartida: ejemMCshare.md
       - Calculo de integral con MC en memoria distribuida: ejemDis.md
-  - Referencia: 
+  - Referencias: 
       - MC en memoria compartida: cpp/classMC.md
       - MC en memoria distribuida: disCode.md

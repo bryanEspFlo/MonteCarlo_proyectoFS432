@@ -12,6 +12,7 @@ MC::MC(int num_N){
   N = num_N;
   valorIntegral = 0.0;
   valorError = 0.0;
+  time_Procs = 0.0;
 } 
 
 /**
@@ -54,7 +55,6 @@ void MC::calcInt(){
   double t_inicial = seconds();
   #pragma omp parallel
   {
-   num_procesos = omp_get_num_threads();
  
    #pragma omp for reduction(+: sumatoria)
    for(int i = 0; i < N; i++){
@@ -73,10 +73,7 @@ void MC::calcInt(){
   valorIntegral = integral;
   valorError = error;
   
-  std::cout << "Número de hilos: " << num_procesos << std::endl;
-  std::cout << "Tiempo en completar el proceso: " << t_final - t_inicial <<  std::endl;
-  std::cout << "Integral: "<< integral << std::endl;
-  std::cout << "Error obtenido: " << error << std::endl;
+  time_Procs = t_final - t_inicial;
 }
 
 /**
@@ -98,4 +95,11 @@ double MC::getNVal() const{
  */
 double MC::getErrVal() const{
   return valorError;
+}
+
+/**
+ * @ brief Devuelve que toma el cálculo de la integral con Monte Carlo.
+ */
+double MC::getTime() const{
+  return time_Procs;
 }

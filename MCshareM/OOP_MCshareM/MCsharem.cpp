@@ -5,13 +5,19 @@
 #include <omp.h>
 #include <sys/time.h>
 
-MC::MC(int num_N){ // Constructor personalizado.
+/**
+ * @brief Constructor personzalizado de la clase MC.
+ */
+MC::MC(int num_N){
   N = num_N;
   valorIntegral = 0.0;
   valorError = 0.0;
+  time_Procs = 0.0;
 } 
-  
-// Método con la función para el cálculo del volumen de una esfera en 4D.
+
+/**
+ * @brief Función del integrando para el cálculo del volumen de una hiperesfera con Monte Carlo.
+ */
 int MC::Esphere4D(double x1, double x2, double x3, double x4){
    int val_func = 0;
   
@@ -22,8 +28,11 @@ int MC::Esphere4D(double x1, double x2, double x3, double x4){
   return val_func;
 }
 
-
-// Método para calcular el tiempo en que tardan las iteraciones.
+/**
+ * @brief Muestra el tiempo transcurrido desde que se invoca.
+ *
+ *  Se utiliza para saber el tiempo que tarda el cálculo de la integral.
+ */
 double MC::seconds(){
   struct timeval tmp;
   double sec;
@@ -32,8 +41,9 @@ double MC::seconds(){
   return sec;
 }
 
-
-// Método que calcula una integral utilizando Monte Carlo.
+/**
+ * @brief Calcula la integral para saber el volumen de la hiperesfera con Monte Carlo.
+ */
 void MC::calcInt(){
 
   int sumatoria = 0;
@@ -42,11 +52,9 @@ void MC::calcInt(){
   std::default_random_engine generator;
   std::uniform_real_distribution<double> distribution(-1.0, 1.0);
  
-  // Paralelización del cálculo de la sumatoria.
   double t_inicial = seconds();
   #pragma omp parallel
   {
-   num_procesos = omp_get_num_threads();
  
    #pragma omp for reduction(+: sumatoria)
    for(int i = 0; i < N; i++){
@@ -56,7 +64,6 @@ void MC::calcInt(){
   }
   double t_final = seconds();
  
-  // Cálculo de la integral y el error.
   double pi = std::acos(-1.0);
   double volumen = (pi*pi) / 2.0;
    
@@ -66,25 +73,33 @@ void MC::calcInt(){
   valorIntegral = integral;
   valorError = error;
   
-  std::cout << "Número de hilos: " << num_procesos << std::endl;
-  std::cout << "Tiempo en completar el proceso: " << t_final - t_inicial <<  std::endl;
-  std::cout << "Integral: "<< integral << std::endl;
-  std::cout << "Error obtenido: " << error << std::endl;
+  time_Procs = t_final - t_inicial;
 }
 
-
-// Método que devuelve el valor de la integral.
+/**
+ * @brief Devuelve el valor de la integral calculada con Monte Carlo.
+ */
 double MC::getIntVal() const{
   return valorIntegral;
 }
 
-
-// Método que devuelve el valor de iteraciones 'N'.
+/**
+ * @brief Devuelve la cantidad de iteraciones realizadas.
+ */
 double MC::getNVal() const{
   return N;
 }
 
-// Método que devuelve el valor del error cometido.
+/**
+ * @brief Devuelve el error cometido del calculo de la integral.
+ */
 double MC::getErrVal() const{
   return valorError;
+}
+
+/**
+ * @ brief Devuelve que toma el cálculo de la integral con Monte Carlo.
+ */
+double MC::getTime() const{
+  return time_Procs;
 }
