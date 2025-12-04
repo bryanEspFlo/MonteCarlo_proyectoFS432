@@ -1,7 +1,7 @@
 #include <mpi.h>
 #include <iostream>
 #include <cstdlib>
-#include "MonteCarloMPI.hpp"
+#include "Distribuida.hpp"
 
 int main(int argc, char* argv[]) {
     MPI_Init(&argc, &argv);
@@ -24,4 +24,5 @@ int main(int argc, char* argv[]) {
 
     MPI_Finalize();
     return 0;
+
 }
