@@ -14,6 +14,14 @@ plugins:
             FILE_PATTERNS: "*.cpp *.h*"
             RECURSIVE: True
 
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
 nav:
   - Inicio: index.md
   - Tutoriales:
