@@ -1,5 +1,5 @@
-#ifndef MONTECARLOMPI_HPP
-#define MONTECARLOMPI_HPP
+#ifndef DISTRIBUIDA_HPP
+#define DISTRIBUIDA_HPP
 
 #include <random>
 
@@ -18,5 +18,6 @@ public:
     int integrando(double x1, double x2, double x3, double x4);
     double ejecutar();
 };
+
 
 #endif
