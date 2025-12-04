@@ -7,16 +7,10 @@ Con este propósito, se realizó un programa en C++ orientado a objetos utilizan
 ##Uso
 
 Primero se debe crear un objeto de tipo MonteCarloMPI, indicando el número total de iteraciones que se desea realizar.
-Luego, para calcular el volumen se invoca el método .ejecutar().
-
-El proceso rank 0 mostrará el volumen estimado, el volumen teórico, el error relativo y el tiempo máximo de ejecución entre todos los procesos.
-
-El siguiente ejemplo utiliza la clase con MPI:
+Luego, para calcular el volumen se invoca el método .ejecutar(). El proceso rank 0 mostrará el volumen estimado, el volumen teórico, el error relativo y el tiempo máximo de ejecución entre todos los procesos.
 
 Primero se debe crear un objeto de tipo MonteCarloMPI, indicando el número total de iteraciones que se desea realizar.
-Luego, para calcular el volumen se invoca el método .ejecutar().
-
-El proceso rank 0 mostrará el volumen estimado, el volumen teórico, el error relativo y el tiempo máximo de ejecución entre todos los procesos.
+Luego, para calcular el volumen se invoca el método .ejecutar(). El proceso rank 0 mostrará el volumen estimado, el volumen teórico, el error relativo y el tiempo máximo de ejecución entre todos los procesos.
 
 El siguiente ejemplo utiliza la clase con MPI:
 
@@ -44,11 +38,11 @@ int main(int argc, char* argv[]) {
 
 Para compilar se deben tener los archivos:
 
-MonteCarloMPI.hpp — declaración de la clase
+- MonteCarloMPI.hpp — declaración de la clase
 
-MonteCarloMPI.cpp — implementación de la clase
+- MonteCarloMPI.cpp — implementación de la clase
 
-main.cpp — archivo principal que usa la clase
+- main.cpp — archivo principal que usa la clase
 
 Luego, se compilan utilizando mpic++:
 
@@ -64,3 +58,4 @@ Por ejemplo, con 8 procesos:
 
 
 mpirun -np 8 ./MonteCarlo
+
