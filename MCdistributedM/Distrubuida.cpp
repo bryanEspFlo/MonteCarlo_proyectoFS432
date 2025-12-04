@@ -1,4 +1,4 @@
-#include "MonteCarloMPI.hpp"
+#include "Distribuida.hpp"
 #include <mpi.h>
 #include <iostream>
 #include <cmath>
@@ -66,3 +66,4 @@ double MonteCarloMPI::ejecutar() {
     MPI_Bcast(&Integral, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
     return Integral;
 }
+
