@@ -46,7 +46,7 @@ Para compilar se deben tener los archivos:
 
 Luego, se compilan utilizando mpic++:
 
-mpic++ -O2 -o MonteCarlo main.cpp MonteCarloMPI.cpp
+mpic++ -O2 -o MonteCarlo main.cpp Distribuida.cpp
 
 ##Ejecución
 
@@ -58,4 +58,5 @@ Por ejemplo, con 8 procesos:
 
 
 mpirun -np 8 ./MonteCarlo
+
 
