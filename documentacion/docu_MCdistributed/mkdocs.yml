@@ -3,5 +3,6 @@ nav:
   - Inicio: index.md
   - API: api.md
   - Ejemplos: ejemplos.md
+  - Referencia del Código (Doxygen): doxygen/html/index.html
 theme:
   name: material
