@@ -1,6 +1,11 @@
 #include <iostream>
 #include "MCsharem.hpp"
 
+/**
+ * @brief Fución principal.
+ *
+ * Crea un objeto de tipo MC y muestra: el volumen de una hiperesfera en 4D, cantidad de iteraciones y error cometido.
+ */
 int main(){
 
   MC MC1(10000000);

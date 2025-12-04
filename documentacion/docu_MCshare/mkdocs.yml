@@ -1,1 +1,23 @@
-site_name: My Docs
+site_name: Proyecto FC
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - mkdoxy:
+      projects:
+        cpp:
+          src-dirs: "src include"
+          doxy-cfg:
+            FILE_PATTERNS: "*.cpp *.h*"
+            RECURSIVE: True
+
+nav:
+  - Inicio: index.md
+  - Ejemplos:
+      - Calculo de integral con MC en memoria compartida: ejemMCshare.md
+      - Calculo de integral con MC en memoria distribuida: ejemDis.md
+  - Referencia: 
+      - MC en memoria compartida: cpp/classMC.md
+      - MC en memoria distribuida: disCode.md

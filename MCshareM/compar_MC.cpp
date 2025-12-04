@@ -19,7 +19,7 @@ double seconds(){
 int funcIntegrando(double x1, double x2, double x3, double x4){
   int func = 0;
 
-  if((x1*x1 + x2*x2 + x3*x3 + x4*x4) <= 1){
+  if(sqrt(x1*x1 + x2*x2 + x3*x3 + x4*x4) <= 1){
     func = 1;
   }
 

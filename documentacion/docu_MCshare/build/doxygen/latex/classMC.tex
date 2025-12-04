@@ -1,0 +1,86 @@
+\doxysection{MC Class Reference}
+\hypertarget{classMC}{}\label{classMC}\index{MC@{MC}}
+
+
+Clase \doxylink{classMC}{MC} (Monte Carlo) que calcula integrales con el método homónimo.  
+
+
+
+
+{\ttfamily \#include $<$MCsharem.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMC_aacccc53aab9153c4a967ab5941f5fad9}{MC}} (int \mbox{\hyperlink{classMC_a384ec88888b1decad3f3ab6abc366044}{N}})
+\begin{DoxyCompactList}\small\item\em Constructor personalizado de la clase \doxylink{classMC}{MC}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMC_aadaf92658e9aa8a519598e7ace145691}{calc\+Int}} ()
+\begin{DoxyCompactList}\small\item\em Método que calcula el volumen de la hiperesfera con Monte carlo. \end{DoxyCompactList}\item 
+\Hypertarget{classMC_ae0c52454ead52aa76ef267d7095e057e}\label{classMC_ae0c52454ead52aa76ef267d7095e057e} 
+double {\bfseries get\+Int\+Val} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de la integral calculada con Monte Carlo. \end{DoxyCompactList}\item 
+\Hypertarget{classMC_a40cd5dec7b3d3a25009dc9a4dcbf512f}\label{classMC_a40cd5dec7b3d3a25009dc9a4dcbf512f} 
+double {\bfseries get\+NVal} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la cantidad de iteraciones realizadas. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classMC_a63b5bb4c98ef92917ecd56929f1561b3}{get\+Err\+Val}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el error cometido al calcular la integral. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMC_a384ec88888b1decad3f3ab6abc366044}\label{classMC_a384ec88888b1decad3f3ab6abc366044} 
+int {\bfseries N}
+\begin{DoxyCompactList}\small\item\em Cantidad de iteraciones para realizar Monte Carlo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase \doxylink{classMC}{MC} (Monte Carlo) que calcula integrales con el método homónimo. 
+
+La clase \doxylink{classMC}{MC} permite calcular el volumen de una hiperesfera unitaria en 4 dimenciones. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMC_aacccc53aab9153c4a967ab5941f5fad9}\index{MC@{MC}!MC@{MC}}
+\index{MC@{MC}!MC@{MC}}
+\doxysubsubsection{\texorpdfstring{MC()}{MC()}}
+{\footnotesize\ttfamily \label{classMC_aacccc53aab9153c4a967ab5941f5fad9} 
+MC\+::\+MC (\begin{DoxyParamCaption}\item[{int}]{N}{}\end{DoxyParamCaption})}
+
+
+
+Constructor personalizado de la clase \doxylink{classMC}{MC}. 
+
+Constructor personzalizado de la clase \doxylink{classMC}{MC}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & Atributo con la cantidad de interaciones. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMC_aadaf92658e9aa8a519598e7ace145691}\index{MC@{MC}!calcInt@{calcInt}}
+\index{calcInt@{calcInt}!MC@{MC}}
+\doxysubsubsection{\texorpdfstring{calcInt()}{calcInt()}}
+{\footnotesize\ttfamily \label{classMC_aadaf92658e9aa8a519598e7ace145691} 
+void MC\+::calc\+Int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Método que calcula el volumen de la hiperesfera con Monte carlo. 
+
+Calcula la integral para saber el volumen de la hiperesfera con Monte Carlo. \Hypertarget{classMC_a63b5bb4c98ef92917ecd56929f1561b3}\index{MC@{MC}!getErrVal@{getErrVal}}
+\index{getErrVal@{getErrVal}!MC@{MC}}
+\doxysubsubsection{\texorpdfstring{getErrVal()}{getErrVal()}}
+{\footnotesize\ttfamily \label{classMC_a63b5bb4c98ef92917ecd56929f1561b3} 
+double MC\+::get\+Err\+Val (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el error cometido al calcular la integral. 
+
+Devuelve el error cometido del calculo de la integral. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/MCsharem.\+hpp\item 
+src/MCsharem.\+cpp\end{DoxyCompactItemize}

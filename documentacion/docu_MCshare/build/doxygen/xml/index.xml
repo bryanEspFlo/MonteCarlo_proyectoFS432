@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="classMC" kind="class"><name>MC</name>
+    <member refid="classMC_1a0a077c72b15e8726cf94e5d114c1e195" kind="variable"><name>valorIntegral</name></member>
+    <member refid="classMC_1ac5fd524534a2e36815ea5d7a6831b1ea" kind="variable"><name>valorError</name></member>
+    <member refid="classMC_1a384ec88888b1decad3f3ab6abc366044" kind="variable"><name>N</name></member>
+    <member refid="classMC_1a42d26bd270270ea5788dcc421543d991" kind="function"><name>MC</name></member>
+    <member refid="classMC_1af15d14de0488da7a8a63f9d815f50405" kind="function"><name>Esphere4D</name></member>
+    <member refid="classMC_1a5fbbb0bb055c12a8f5104ca110109b0a" kind="function"><name>seconds</name></member>
+    <member refid="classMC_1aacccc53aab9153c4a967ab5941f5fad9" kind="function"><name>MC</name></member>
+    <member refid="classMC_1aadaf92658e9aa8a519598e7ace145691" kind="function"><name>calcInt</name></member>
+    <member refid="classMC_1ae0c52454ead52aa76ef267d7095e057e" kind="function"><name>getIntVal</name></member>
+    <member refid="classMC_1a40cd5dec7b3d3a25009dc9a4dcbf512f" kind="function"><name>getNVal</name></member>
+    <member refid="classMC_1a63b5bb4c98ef92917ecd56929f1561b3" kind="function"><name>getErrVal</name></member>
+  </compound>
+  <compound refid="MCsharem_8hpp" kind="file"><name>MCsharem.hpp</name>
+  </compound>
+  <compound refid="MCsharem_8cpp" kind="file"><name>MCsharem.cpp</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

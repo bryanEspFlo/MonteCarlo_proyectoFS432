@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classMC" kind="class" language="C++" prot="public">
+    <compoundname>MC</compoundname>
+    <includes refid="MCsharem_8hpp" local="no">MCsharem.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMC_1a0a077c72b15e8726cf94e5d114c1e195" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MC::valorIntegral</definition>
+        <argsstring></argsstring>
+        <name>valorIntegral</name>
+        <qualifiedname>MC::valorIntegral</qualifiedname>
+        <briefdescription>
+<para>Valor del volumen de la hiperesfera calculado con Monte Carlo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="29" column="12" bodyfile="include/MCsharem.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMC_1ac5fd524534a2e36815ea5d7a6831b1ea" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MC::valorError</definition>
+        <argsstring></argsstring>
+        <name>valorError</name>
+        <qualifiedname>MC::valorError</qualifiedname>
+        <briefdescription>
+<para>Valor del error cometido en base al valor teórico real del volumen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="30" column="12" bodyfile="include/MCsharem.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classMC_1a384ec88888b1decad3f3ab6abc366044" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MC::N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <qualifiedname>MC::N</qualifiedname>
+        <briefdescription>
+<para>Cantidad de iteraciones para realizar Monte Carlo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="39" column="9" bodyfile="include/MCsharem.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMC_1a42d26bd270270ea5788dcc421543d991" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MC::MC</definition>
+        <argsstring>()</argsstring>
+        <name>MC</name>
+        <qualifiedname>MC::MC</qualifiedname>
+        <briefdescription>
+<para>Constructor por defecto de la clase <ref refid="classMC" kindref="compound">MC</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>El constructor por defecto se deja por fuera para que no se pueda crear un objeto de tipo <ref refid="classMC" kindref="compound">MC</ref> sin indicar un número de interaciones. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="17" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classMC_1af15d14de0488da7a8a63f9d815f50405" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MC::Esphere4D</definition>
+        <argsstring>(double x1, double x2, double x3, double x4)</argsstring>
+        <name>Esphere4D</name>
+        <qualifiedname>MC::Esphere4D</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x3</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x4</declname>
+        </param>
+        <briefdescription>
+<para>Método que indica si el punto está dentro de la hiperesfera. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Función del integrando para el cálculo del volumen de una hiperesfera con Monte Carlo.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada del punto en el eje x1. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada del punto en el eje x2. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada del punto en el eje x3. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada del punto en el eje x4. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Devuelve 1 si el punto está dentro de la hiperesfera y 0 si no. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="27" column="9" bodyfile="src/MCsharem.cpp" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classMC_1a5fbbb0bb055c12a8f5104ca110109b0a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MC::seconds</definition>
+        <argsstring>()</argsstring>
+        <name>seconds</name>
+        <qualifiedname>MC::seconds</qualifiedname>
+        <briefdescription>
+<para>Método para saber el tiempo que toma una iteración. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Muestra el tiempo transcurrido desde que se invoca.</para>
+<para><simplesect kind="return"><para>El tiempo en segundos que ha transcurrido desde que se invoca.</para>
+</simplesect>
+Se utiliza para saber el tiempo que tarda el cálculo de la integral. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="36" column="12" bodyfile="src/MCsharem.cpp" bodystart="35" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMC_1aacccc53aab9153c4a967ab5941f5fad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MC::MC</definition>
+        <argsstring>(int N)</argsstring>
+        <name>MC</name>
+        <qualifiedname>MC::MC</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+<para>Constructor personalizado de la clase <ref refid="classMC" kindref="compound">MC</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor personzalizado de la clase <ref refid="classMC" kindref="compound">MC</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Atributo con la cantidad de interaciones. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="45" column="5" bodyfile="src/MCsharem.cpp" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classMC_1aadaf92658e9aa8a519598e7ace145691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MC::calcInt</definition>
+        <argsstring>()</argsstring>
+        <name>calcInt</name>
+        <qualifiedname>MC::calcInt</qualifiedname>
+        <briefdescription>
+<para>Método que calcula el volumen de la hiperesfera con Monte carlo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calcula la integral para saber el volumen de la hiperesfera con Monte Carlo. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="50" column="10" bodyfile="src/MCsharem.cpp" bodystart="46" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classMC_1ae0c52454ead52aa76ef267d7095e057e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MC::getIntVal</definition>
+        <argsstring>() const</argsstring>
+        <name>getIntVal</name>
+        <qualifiedname>MC::getIntVal</qualifiedname>
+        <briefdescription>
+<para>Devuelve el valor de la integral calculada con Monte Carlo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="55" column="12" bodyfile="src/MCsharem.cpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classMC_1a40cd5dec7b3d3a25009dc9a4dcbf512f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MC::getNVal</definition>
+        <argsstring>() const</argsstring>
+        <name>getNVal</name>
+        <qualifiedname>MC::getNVal</qualifiedname>
+        <briefdescription>
+<para>Devuelve la cantidad de iteraciones realizadas. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="60" column="12" bodyfile="src/MCsharem.cpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classMC_1a63b5bb4c98ef92917ecd56929f1561b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MC::getErrVal</definition>
+        <argsstring>() const</argsstring>
+        <name>getErrVal</name>
+        <qualifiedname>MC::getErrVal</qualifiedname>
+        <briefdescription>
+<para>Devuelve el error cometido al calcular la integral. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Devuelve el error cometido del calculo de la integral. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="65" column="12" bodyfile="src/MCsharem.cpp" bodystart="99" bodyend="101"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Clase <ref refid="classMC" kindref="compound">MC</ref> (Monte Carlo) que calcula integrales con el método homónimo. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>La clase <ref refid="classMC" kindref="compound">MC</ref> permite calcular el volumen de una hiperesfera unitaria en 4 dimenciones. </para>
+    </detaileddescription>
+    <location file="include/MCsharem.hpp" line="9" column="1" bodyfile="include/MCsharem.hpp" bodystart="9" bodyend="66"/>
+    <listofallmembers>
+      <member refid="classMC_1aadaf92658e9aa8a519598e7ace145691" prot="public" virt="non-virtual"><scope>MC</scope><name>calcInt</name></member>
+      <member refid="classMC_1af15d14de0488da7a8a63f9d815f50405" prot="private" virt="non-virtual"><scope>MC</scope><name>Esphere4D</name></member>
+      <member refid="classMC_1a63b5bb4c98ef92917ecd56929f1561b3" prot="public" virt="non-virtual"><scope>MC</scope><name>getErrVal</name></member>
+      <member refid="classMC_1ae0c52454ead52aa76ef267d7095e057e" prot="public" virt="non-virtual"><scope>MC</scope><name>getIntVal</name></member>
+      <member refid="classMC_1a40cd5dec7b3d3a25009dc9a4dcbf512f" prot="public" virt="non-virtual"><scope>MC</scope><name>getNVal</name></member>
+      <member refid="classMC_1a42d26bd270270ea5788dcc421543d991" prot="private" virt="non-virtual"><scope>MC</scope><name>MC</name></member>
+      <member refid="classMC_1aacccc53aab9153c4a967ab5941f5fad9" prot="public" virt="non-virtual"><scope>MC</scope><name>MC</name></member>
+      <member refid="classMC_1a384ec88888b1decad3f3ab6abc366044" prot="public" virt="non-virtual"><scope>MC</scope><name>N</name></member>
+      <member refid="classMC_1a5fbbb0bb055c12a8f5104ca110109b0a" prot="private" virt="non-virtual"><scope>MC</scope><name>seconds</name></member>
+      <member refid="classMC_1ac5fd524534a2e36815ea5d7a6831b1ea" prot="private" virt="non-virtual"><scope>MC</scope><name>valorError</name></member>
+      <member refid="classMC_1a0a077c72b15e8726cf94e5d114c1e195" prot="private" virt="non-virtual"><scope>MC</scope><name>valorIntegral</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

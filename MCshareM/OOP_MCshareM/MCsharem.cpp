@@ -15,7 +15,7 @@ MC::MC(int num_N){ // Constructor personalizado.
 int MC::Esphere4D(double x1, double x2, double x3, double x4){
    int val_func = 0;
   
-   if((x1*x1 + x2*x2 + x3*x3 + x4*x4) <= 1){
+   if(sqrt(x1*x1 + x2*x2 + x3*x3 + x4*x4) <= 1){
      val_func = 1;
    }
   
