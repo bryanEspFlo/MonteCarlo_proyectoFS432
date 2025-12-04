@@ -50,13 +50,13 @@ mpic++ -O2 -o MonteCarlo main.cpp Distribuida.cpp
 
 ##Ejecución
 
-ara ejecutar el programa con N procesos se utiliza:
+Para ejecutar el programa con N procesos se utiliza:
 
 mpirun -np N ./MonteCarlo
 
 Por ejemplo, con 8 procesos:
 
-
 mpirun -np 8 ./MonteCarlo
+
 
 
