@@ -62,6 +62,7 @@ _Clase_ [_**MC**_](classMC.md) _(Monte Carlo) que calcula integrales con el mét
 |  double | [**getErrVal**](#function-geterrval) () const<br>_Devuelve el error cometido al calcular la integral._  |
 |  double | [**getIntVal**](#function-getintval) () const<br>_Devuelve el valor de la integral calculada con Monte Carlo._  |
 |  double | [**getNVal**](#function-getnval) () const<br>_Devuelve la cantidad de iteraciones realizadas._  |
+|  double | [**getTime**](#function-gettime) () const<br>_Devuelve el tiempo que se toma en calcular la integral con Monte Carlo._  |
 
 
 
@@ -203,6 +204,20 @@ double MC::getIntVal () const
 _Devuelve la cantidad de iteraciones realizadas._ 
 ```C++
 double MC::getNVal () const
+```
+
+
+
+
+<hr>
+
+
+
+### function getTime 
+
+_Devuelve el tiempo que se toma en calcular la integral con Monte Carlo._ 
+```C++
+double MC::getTime () const
 ```
 
 

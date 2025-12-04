@@ -98,7 +98,7 @@ double MC::getErrVal() const{
 }
 
 /**
- * @ brief Devuelve que toma el cálculo de la integral con Monte Carlo.
+ * 
  */
 double MC::getTime() const{
   return time_Procs;

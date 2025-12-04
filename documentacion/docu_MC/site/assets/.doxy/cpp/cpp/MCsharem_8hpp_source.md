@@ -19,6 +19,7 @@ class MC{
 
     double valorIntegral; 
     double valorError; 
+    double time_Procs; 
    
     double seconds();
 
@@ -32,6 +33,8 @@ class MC{
     double getIntVal() const;
 
     double getNVal() const;
+
+    double getTime() const;
 
     double getErrVal() const; // Muestra el valor del error cometido.
 };

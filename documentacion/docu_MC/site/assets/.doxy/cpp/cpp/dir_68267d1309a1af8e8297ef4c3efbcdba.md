@@ -21,8 +21,8 @@
 
 | Type | Name |
 | ---: | :--- |
+| file | [**Distribuida.cpp**](Distribuida_8cpp.md) <br> |
 | file | [**MCsharem.cpp**](MCsharem_8cpp.md) <br> |
-| file | [**mcdis.cpp**](mcdis_8cpp.md) <br> |
 
 
 

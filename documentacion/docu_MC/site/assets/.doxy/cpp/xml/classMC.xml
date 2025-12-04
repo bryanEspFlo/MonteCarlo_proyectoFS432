@@ -34,6 +34,21 @@
         </inbodydescription>
         <location file="include/MCsharem.hpp" line="30" column="12" bodyfile="include/MCsharem.hpp" bodystart="30" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classMC_1af5e19b7b49ec4f3669c0d95a9bface15" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MC::time_Procs</definition>
+        <argsstring></argsstring>
+        <name>time_Procs</name>
+        <qualifiedname>MC::time_Procs</qualifiedname>
+        <briefdescription>
+<para>Tiempo en realizar el cálculo de la integral con Monte Carlo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="31" column="12" bodyfile="include/MCsharem.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
     </sectiondef>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classMC_1a384ec88888b1decad3f3ab6abc366044" prot="public" static="no" mutable="no">
@@ -49,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MCsharem.hpp" line="39" column="9" bodyfile="include/MCsharem.hpp" bodystart="39" bodyend="-1"/>
+        <location file="include/MCsharem.hpp" line="40" column="9" bodyfile="include/MCsharem.hpp" bodystart="40" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -135,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MCsharem.hpp" line="27" column="9" bodyfile="src/MCsharem.cpp" bodystart="20" bodyend="28"/>
+        <location file="include/MCsharem.hpp" line="27" column="9" bodyfile="src/MCsharem.cpp" bodystart="21" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classMC_1a5fbbb0bb055c12a8f5104ca110109b0a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -154,7 +169,7 @@ Se utiliza para saber el tiempo que tarda el cálculo de la integral. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MCsharem.hpp" line="36" column="12" bodyfile="src/MCsharem.cpp" bodystart="35" bodyend="41"/>
+        <location file="include/MCsharem.hpp" line="37" column="12" bodyfile="src/MCsharem.cpp" bodystart="36" bodyend="42"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -186,7 +201,7 @@ Se utiliza para saber el tiempo que tarda el cálculo de la integral. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MCsharem.hpp" line="45" column="5" bodyfile="src/MCsharem.cpp" bodystart="11" bodyend="15"/>
+        <location file="include/MCsharem.hpp" line="46" column="5" bodyfile="src/MCsharem.cpp" bodystart="11" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="classMC_1aadaf92658e9aa8a519598e7ace145691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -202,7 +217,7 @@ Se utiliza para saber el tiempo que tarda el cálculo de la integral. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MCsharem.hpp" line="50" column="10" bodyfile="src/MCsharem.cpp" bodystart="46" bodyend="80"/>
+        <location file="include/MCsharem.hpp" line="51" column="10" bodyfile="src/MCsharem.cpp" bodystart="47" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classMC_1ae0c52454ead52aa76ef267d7095e057e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -217,7 +232,7 @@ Se utiliza para saber el tiempo que tarda el cálculo de la integral. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MCsharem.hpp" line="55" column="12" bodyfile="src/MCsharem.cpp" bodystart="85" bodyend="87"/>
+        <location file="include/MCsharem.hpp" line="56" column="12" bodyfile="src/MCsharem.cpp" bodystart="82" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="classMC_1a40cd5dec7b3d3a25009dc9a4dcbf512f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -232,7 +247,22 @@ Se utiliza para saber el tiempo que tarda el cálculo de la integral. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MCsharem.hpp" line="60" column="12" bodyfile="src/MCsharem.cpp" bodystart="92" bodyend="94"/>
+        <location file="include/MCsharem.hpp" line="61" column="12" bodyfile="src/MCsharem.cpp" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classMC_1a4cc721957913b560ad02521545933629" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MC::getTime</definition>
+        <argsstring>() const</argsstring>
+        <name>getTime</name>
+        <qualifiedname>MC::getTime</qualifiedname>
+        <briefdescription>
+<para>Devuelve el tiempo que se toma en calcular la integral con Monte Carlo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MCsharem.hpp" line="66" column="12" bodyfile="src/MCsharem.cpp" bodystart="103" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="classMC_1a63b5bb4c98ef92917ecd56929f1561b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -248,7 +278,7 @@ Se utiliza para saber el tiempo que tarda el cálculo de la integral. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MCsharem.hpp" line="65" column="12" bodyfile="src/MCsharem.cpp" bodystart="99" bodyend="101"/>
+        <location file="include/MCsharem.hpp" line="71" column="12" bodyfile="src/MCsharem.cpp" bodystart="96" bodyend="98"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -257,17 +287,19 @@ Se utiliza para saber el tiempo que tarda el cálculo de la integral. </para>
     <detaileddescription>
 <para>La clase <ref refid="classMC" kindref="compound">MC</ref> permite calcular el volumen de una hiperesfera unitaria en 4 dimenciones. </para>
     </detaileddescription>
-    <location file="include/MCsharem.hpp" line="9" column="1" bodyfile="include/MCsharem.hpp" bodystart="9" bodyend="66"/>
+    <location file="include/MCsharem.hpp" line="9" column="1" bodyfile="include/MCsharem.hpp" bodystart="9" bodyend="72"/>
     <listofallmembers>
       <member refid="classMC_1aadaf92658e9aa8a519598e7ace145691" prot="public" virt="non-virtual"><scope>MC</scope><name>calcInt</name></member>
       <member refid="classMC_1af15d14de0488da7a8a63f9d815f50405" prot="private" virt="non-virtual"><scope>MC</scope><name>Esphere4D</name></member>
       <member refid="classMC_1a63b5bb4c98ef92917ecd56929f1561b3" prot="public" virt="non-virtual"><scope>MC</scope><name>getErrVal</name></member>
       <member refid="classMC_1ae0c52454ead52aa76ef267d7095e057e" prot="public" virt="non-virtual"><scope>MC</scope><name>getIntVal</name></member>
       <member refid="classMC_1a40cd5dec7b3d3a25009dc9a4dcbf512f" prot="public" virt="non-virtual"><scope>MC</scope><name>getNVal</name></member>
+      <member refid="classMC_1a4cc721957913b560ad02521545933629" prot="public" virt="non-virtual"><scope>MC</scope><name>getTime</name></member>
       <member refid="classMC_1a42d26bd270270ea5788dcc421543d991" prot="private" virt="non-virtual"><scope>MC</scope><name>MC</name></member>
       <member refid="classMC_1aacccc53aab9153c4a967ab5941f5fad9" prot="public" virt="non-virtual"><scope>MC</scope><name>MC</name></member>
       <member refid="classMC_1a384ec88888b1decad3f3ab6abc366044" prot="public" virt="non-virtual"><scope>MC</scope><name>N</name></member>
       <member refid="classMC_1a5fbbb0bb055c12a8f5104ca110109b0a" prot="private" virt="non-virtual"><scope>MC</scope><name>seconds</name></member>
+      <member refid="classMC_1af5e19b7b49ec4f3669c0d95a9bface15" prot="private" virt="non-virtual"><scope>MC</scope><name>time_Procs</name></member>
       <member refid="classMC_1ac5fd524534a2e36815ea5d7a6831b1ea" prot="private" virt="non-virtual"><scope>MC</scope><name>valorError</name></member>
       <member refid="classMC_1a0a077c72b15e8726cf94e5d114c1e195" prot="private" virt="non-virtual"><scope>MC</scope><name>valorIntegral</name></member>
     </listofallmembers>
