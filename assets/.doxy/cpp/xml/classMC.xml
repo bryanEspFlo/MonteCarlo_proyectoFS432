@@ -259,7 +259,6 @@ Se utiliza para saber el tiempo que tarda el cálculo de la integral. </para>
 <para>Devuelve el tiempo que se toma en calcular la integral con Monte Carlo. </para>
         </briefdescription>
         <detaileddescription>
-<para>Devuelve que toma el cálculo de la integral con Monte Carlo. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

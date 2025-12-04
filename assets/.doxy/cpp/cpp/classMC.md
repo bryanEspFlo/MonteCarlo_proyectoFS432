@@ -222,10 +222,6 @@ double MC::getTime () const
 
 
 
-Devuelve que toma el cálculo de la integral con Monte Carlo. 
-
-
-        
 
 <hr>
 
